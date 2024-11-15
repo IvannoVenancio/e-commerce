@@ -131,7 +131,7 @@ display: flex;
  .banner button {
    padding: 10px 20px; 
   font-size: 20px; 
-  color: #007bff;
+  color:#1f78b7;
    background-color: white;
     border: none; 
     border-radius: 25px; 
@@ -141,6 +141,12 @@ display: flex;
   .banner button:hover {
      background-color: #ddd; 
     }
+    .banner img {
+      width: 300px;
+      border-radius: 50%;
+      box-shadow: 0px 4px 8px rgba(0,0,0,0.3);
+    }
+    
     .products {
   display: flex;
   justify-content: center;
@@ -225,6 +231,43 @@ display: flex;
        } 
     @keyframes slide { 
       from { transform: rotateY(0deg); } to { transform: rotateY(360deg); } }
+
+      /*.propaganda {
+        text-align: center;
+        background-color: #f2f2f2;
+        padding: 50px;
+      }
+      
+      img {
+        width: 300px;
+        border-radius: 50%;
+        box-shadow: 0px 4px 8px rgba(0,0,0,0.3);
+      }
+      
+      h2 {
+        font-size: 36px;
+        color: #333;
+        margin-top: 20px;
+      }
+      
+      p {
+        font-size: 18px;
+        color: #666;
+        margin-top: 10px;
+      }
+      
+      button {
+        background-color: #4CAF50;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px; 
+        margin-top: 20px;
+        border-radius: 4px;
+        cursor:  pointer;
+      }
 
 
 
