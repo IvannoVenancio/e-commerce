@@ -98,4 +98,5 @@ model Customer {
   userId    Int      @unique // Chave estrangeira para User
   user      User     @relation(fields: [userId], references: [id])
   createdAt DateTime @default(now())
+
 }
