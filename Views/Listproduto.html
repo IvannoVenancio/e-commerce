@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gestão de Estoque</title>
+  <link rel="stylesheet" href="../e-commerce/Public/CSS/listproduto.css"> 
+  <header>
+    <h1> DAMAR|TECH </h1>
+    <nav>
+      <a href="/e-commerce/Views/index.html">Inicio</a>
+        <a href="/e-commerce/Views/Listproduto.html">Produtos</a>
+        <a href="/e-commerce/Views/Pedidos.html>Pedidos</a>
+      </nav>
+    </header>
+
+  <script>
+async function listarClientes() {
+    const response = await fetch('http://localhost:3000/clientes');
+    const clientes = await response.json();
+    
+    const lista = document.getElementById('listaClientes');
+    lista.innerHTML = '';
+    clientes.forEach(cliente => {
+      const item = document.createElement('li');
+      item.textContent = `${cliente.nome} - ${cliente.email}`;
+      lista.appendChild(item);
+    });
+  }
+    async function cadastrarProduto() {
+      const nome = document.getElementById('nomeProduto').value;
+      const estoque = document.getElementById('estoqueProduto').value;
+      const preco = document.getElementById('precoProduto').value;
+
+      const response = await fetch('http://localhost:3000/produtos', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ nome, estoque: parseInt(estoque), preco: parseFloat(preco) })
+      });
+
+      const produto = await response.json();
+      alert(`Produto cadastrado: ${produto.nome}`);
+      listarProdutos();
+    }
+
+    async function listarProdutos() {
+      const response = await fetch('http://localhost:3000/produtos');
+      const produtos = await response.json();
+
+      const lista = document.getElementById('listaProdutos');
+      lista.innerHTML = '';
+      produtos.forEach(produto => {
+        const item = document.createElement('li');
+        item.textContent = `${produto.nome} - Em estoque: ${produto.estoque}`;
+        lista.appendChild(item);
+        
+        tabela.innerHTML = `
+        <tr>
+          <th>Nome</th>
+           <th>Descrição</th>
+          <th>Preço</th>
+          <th>Quantidade</th>
+        </tr>
+      `;
+  
+      });
+    }
+  </script>
+</head>
+<body>
+
+  <h1>Gestão de Estoque e Pedidos</h1>
+
+  <section>
+    <h2>Clientes Cadastrados</h2>
+    <button onclick="listaClientes()">Lista de Clientes</button>
+    <ul id="listaClientes"></ul>
+  </section>
+
+  <section>
+    <h2>Cadastrar Produto</h2>
+    <input type="text" id="nomeProduto" placeholder="Nome do Produto">
+    <input type="text" id="descriçao" placeholder="Descrição">
+    <input type="number" id="estoqueProduto" placeholder="Quantidade em Estoque">
+    <input type="number" step="0.01" id="precoProduto" placeholder="Preço">
+    <button onclick="cadastrarProduto()">Cadastrar Produto</button>
+  </section>
+
+
+  <section>
+    <h2>Produtos em Estoque</h2>
+    <button onclick="listaProdutos()">Lista de Produtos</button>
+    <ul id="listaProdutos"></ul>
+    <table id="tabelaProdutos" border="1">
+      <thead>
+        <tr>
+            <th>Nome</th>
+            <th>Descrição</th>
+            <th>Preço</th>
+            <th>Quantidade</th>
+        </tr>
+    </thead>
+    <tbody>
+      
+        <tr>
+            <td> Iphone 16 pro </td>
+            <td>...</td>
+            <td> Kz 100,00</td>
+            <td> 20 </td>
+        </tr>
+        
+        <tr>
+            <td>Iphone 14</td>
+            <td>...</td>
+            <td>Kz 100,00</td>
+            <td> 20 </td>
+        </tr>
+        <tr>
+            <td>Iphone Xr </td>
+            <td>Cor: Vermelha , 256GB, Processador A12 Bionic, Bateria até 15 horas de video</td>
+            <td>Kz 100,00</td>
+            <td> 20 </td>
+        </tr>
+        <tr>
+            <td>Iphone 11</td>
+            <td>...</td>
+            <td>Kz 100,00</td>
+            <td> 20 </td>
+        </tr>
+        <tr>
+          <td>Iphone Xr </td>
+          <td>Cor: preta , 64GB, Processador A12 Bionic, Bateria até 15 horas de video</td>
+          <td>Kz 100,00</td>
+          <td> 20 </td>
+      </tr>
+      <tr>
+        <td>MacBook pro 14 2023 M3 </td>
+        <td>...</td>
+        <td>Kz 100,00</td>
+        <td> 10 </td>
+    </tr>
+    <tr>
+      <td>Tablet 10.1 </td>
+      <td>...</td>
+      <td>Kz 100,00</td>
+      <td> 10 </td>
+  </tr>
+  <tr>
+    <td>Computador Lenovo Portatil </td>
+    <td>...</td>
+    <td>Kz 100,00</td>
+    <td> 10 </td>
+</tr>
+<tr>
+  <td>Computador Gamer</td>
+  <td> Computador para jogos com iluminação LED, microfone e fone de ouvido</td>
+  <td>Kz 100,00</td>
+  <td> 10 </td>
+</tr>
+    </tbody>
+    </table>
+  </section>
+  
+  <footer>
+    <p>&copy; 2024 DAMAR|TECH </p>
+</footer>
+
+</body>
+</html>
+
