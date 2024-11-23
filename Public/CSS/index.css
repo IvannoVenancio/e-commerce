@@ -117,7 +117,7 @@ display: flex;
           pointer-events: none; 
     }
     .banner { 
-      background-color: #007bff;
+      background-color: #033163;
        color: white;
         padding: 100px 20px;
          text-align: center; 
@@ -156,7 +156,7 @@ display: flex;
 .product {
  background-color: white; 
   margin: 10px; padding: 20px; 
-  border: 1px solid #ddd;
+  border: 1px solid #f9f4f4;
  border-radius: 10px; text-align: center;
  flex-basis: calc(25% - 40px); 
  box-sizing: border-box;
