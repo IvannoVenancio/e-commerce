@@ -4,15 +4,15 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Gestão de Estoque</title>
-  <link rel="stylesheet" href="../e-commerce/Public/CSS/listproduto.css"> 
+  <link rel="stylesheet" href="listproduto.css"> 
   <header>
     <h1> DAMAR|TECH </h1>
     <nav>
-      <a href="/e-commerce/Views/index.html">Inicio</a>
-        <a href="/e-commerce/Views/Listproduto.html">Produtos</a>
-        <a href="/e-commerce/Views/Pedidos.html>Pedidos</a>
-      </nav>
-    </header>
+      <a href="/Inicio">Inicio</a>
+        <a href="/Listproduto.html">Produtos</a>
+        <a href="/Pedidos.html">Pedidos</a>
+    </nav>
+</header>
 
   <script>
 async function listarClientes() {
@@ -85,8 +85,7 @@ async function listarClientes() {
     <input type="number" step="0.01" id="precoProduto" placeholder="Preço">
     <button onclick="cadastrarProduto()">Cadastrar Produto</button>
   </section>
-
-
+  
   <section>
     <h2>Produtos em Estoque</h2>
     <button onclick="listaProdutos()">Lista de Produtos</button>
