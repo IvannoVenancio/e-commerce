@@ -7,6 +7,6 @@ let modelsJson = [
     {id:5, name:'Iphone Xr', img:'../img/iphone vermelho.png', price:[100.00, 150.00, 200.00], sizes:['1/72', '1/48', '1/32', '1/3'], description:'Iphone xr de 256GB,Proces­sador A12 Bionic,Bateria até 15 horas de vídeo'},
     {id:6, name:'MacBook pro 14 2023 M3', img:'../img/MacBook pro 14.png', price:[100.00, 150.00, 200.00], sizes:['1/72', '1/48', '1/32'], description:'8-core CPU with 4 performance cores, 16-core Neural Engine, 100GB/s memory'},
     {id:7, name:'Tablet 10.1', img:'../img/tablet 1.png', price:[100.00, 150.00, 200.00], sizes:['1/72', '1/48', '1/32'], description:'32 GB - 2 GB RAM - Wi-Fi, pesando apenas 565 gramas e tem uma espessura de 8.6 mm'},
-    {id:8, name:'Computador Lenovo Portatil', img:'./img/Lenovo-ThinkPad-T15g-laptop-RTX (1).png', price:[100.00, 150.00, 200.00], sizes:['1/72', '1/48', '1/32'], description:'8GB, DDR4, V15-IRU G4 15.6 i3-1315U FHD 8GB 256GB W11P, INTEL CORE I3'},
+    {id:8, name:'Computador Lenovo Portatil', img:'../img/Lenovo-ThinkPad-T15g-laptop-RTX (1).png', price:[100.00, 150.00, 200.00], sizes:['1/72', '1/48', '1/32'], description:'8GB, DDR4, V15-IRU G4 15.6 i3-1315U FHD 8GB 256GB W11P, INTEL CORE I3'},
     {id:9, name:'Computador Gamer', img:'../img/high-performance-gaming-setup-yf.png', price:[100.00, 110.00, 120.00], sizes:['1/72', '1/48', '1/32'], description:'Um computador para jogos com iluminação LED, microfone e fone de ouvido.'}
 ];
