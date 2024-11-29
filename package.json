@@ -93,13 +93,13 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
-=======
+  "license": "ISC",
   "dependencies": {
     "cors": "^2.8.5",
     "express": "^4.21.1",
     "express-handlebars": "^8.0.1"
-  },
+  }
+
   "name": "ecommerce",
   "version": "1.0.0",
   "main": "index.js",
@@ -116,5 +116,4 @@
   "author": "",
   "license": "ISC",
   "description": ""
->>>>>>> main
 }
