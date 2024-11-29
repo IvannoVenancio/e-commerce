@@ -49,9 +49,16 @@ body{
 }
 .header .logo{
   height: 6rem;
-  color:#fff;
-  font-size: 1.6rem;
+  font-family: 'Arial', sans-serif; 
+  font-size: 3rem;
+   font-weight: bold;
+   color: #f0ebe8; 
+   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+   transition: transform 0.3s ease-in-out;
 
+}
+header .logo:hover{
+  transform: scale(1.1);
 }
 .header .navbar{
   display: flex;
