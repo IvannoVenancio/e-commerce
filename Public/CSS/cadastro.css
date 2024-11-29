@@ -6,11 +6,11 @@
 }
 
 body {
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    width: 100%;                    /*largura  */
+    height: 100vh;                  /* Altura */
+    display: flex;                   /*  */
+    justify-content: center;          /* ele distribui os itens dentro do contêiner de forma que fiquem centralizados horizontalmente*/
+    align-items: center;               
     background: #f3f3f44d;
 }
 
@@ -23,9 +23,7 @@ body {
 
 
 
-.form-image img {
-    width: 31rem;
-}
+
 
 .form {
     width: 50%;
