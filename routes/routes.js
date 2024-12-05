@@ -1,8 +1,8 @@
 const express = require('express')
 const indexRoutes = express.Router()
-const GlobalController = require('../Controller/GlobalController')
-const ClienteController = require('../Controller/ClienteController')
-const UserController = require('../controllers/UserController')
+const GlobalController = require('../controller/GlobalController')
+const ClienteController = require('../controller/ClienteController')
+const UserController = require('../controller/UserController')
 
 
 indexRoutes.get('/', GlobalController.home)
