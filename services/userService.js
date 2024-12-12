@@ -13,8 +13,7 @@ const findAllUsers = async() =>{
     return result
 }
 
-<<<<<<< .merge_file_Z69oTQ
+
 module.exports = { createUser, findAllUsers }
-=======
 module.exports = { createUser, findAllUsers }
->>>>>>> .merge_file_kwaJT6
+

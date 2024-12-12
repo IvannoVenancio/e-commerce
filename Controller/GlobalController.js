@@ -28,21 +28,14 @@ exports.carrinho = async(req, res) => {
 }
 exports.login = async(req, res) => {    
     try {
-        res.render("login")  
+        res.render("login",{layout:"cdmanin.handlebars"})  
     }catch(err){
         console.log(err)
     }      
 }
 exports.Pedidos = async(req, res) => {    
     try {
-        res.render("Pedidos")  
-    }catch(err){
-        console.log(err)
-    }      
-}
-exports.Pedidos = async(req, res) => {    
-    try {
-        res.render("Pedidos")  
+        res.render("Pedidos",{layout:"cdmanin.handlebars"})  
     }catch(err){
         console.log(err)
     }      
