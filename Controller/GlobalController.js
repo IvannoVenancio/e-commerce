@@ -7,7 +7,7 @@ exports.home = async(req, res) => {
 }
 exports.cadastro = async(req, res) => {    
     try {
-        res.render("cadastro")  
+        res.render("cadastro",{layout:"ccadastro.handlebars"})  
     }catch(err){
         console.log(err)
     }      

@@ -1,17 +1,5 @@
-<<<<<<< HEAD
-version: '3.4'
 
-services:
-  ecommerce:
-    image: ecommerce
-    build:
-      context: .
-      dockerfile: ./Dockerfile
-    environment:
-      NODE_ENV: production
-    ports:
-      - 3000:3000
-=======
+
 version: '3.7'
 
 services:
@@ -53,4 +41,4 @@ volumes:
 networks:
   app-network:
     driver: bridge
->>>>>>> main
+
