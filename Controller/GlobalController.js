@@ -21,7 +21,7 @@ exports.Listproduto = async(req, res) => {
 }
 exports.carrinho = async(req, res) => {    
     try {
-        res.render("carrinho")  
+        res.render("carrinho",{layout:"cdmanin.handlebars"})  
     }catch(err){
         console.log(err)
     }      

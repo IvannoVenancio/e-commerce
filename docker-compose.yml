@@ -34,9 +34,7 @@ services:
 
 volumes:
   damartec-default: {}
-
-       
-
+  
 
 networks:
   app-network:
