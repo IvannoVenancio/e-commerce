@@ -14,14 +14,11 @@ services:
       - ./:/home/app/
     networks:
       - app-network
-<<<<<<< HEAD
-=======
     depends_on:
       - mysqldb
     links:
       - mysqldb
     
->>>>>>> 62b21158499c6e118495eb26a31555d407b1eb48
     
   mysqldb:
     image: mysql:8.0.21
@@ -34,14 +31,6 @@ services:
      - damartec-default:/var/lib/mysql
     networks: 
      - app-network
-<<<<<<< HEAD
-
-volumes:
-  damartec-default: {}
-
-       
-=======
->>>>>>> 62b21158499c6e118495eb26a31555d407b1eb48
 
 volumes:
   damartec-default: {}
