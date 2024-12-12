@@ -1,18 +1,40 @@
 version: '3.7'
 
 services:
- app:
+  app:
     build:
       context: ./
       dockerfile: Dockerfile
     container_name: node-app
+    env_file:
+      - ./.env
     ports:
       - 3000:3000
     volumes:
       - ./:/home/app/
     networks:
       - app-network
+    depends_on:
+      - mysqldb
+    links:
+      - mysqldb
+    
+    
+  mysqldb:
+    image: mysql:8.0.21
+    container_name: mysql-Damartec
+    env_file:
+      - ./.env
+    ports:
+     - 3306:3306
+    volumes:
+     - damartec-default:/var/lib/mysql
+    networks: 
+     - app-network
 
+volumes:
+  damartec-default: {}
+  
 
 networks:
   app-network:
