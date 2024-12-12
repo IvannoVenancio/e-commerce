@@ -12,6 +12,90 @@ datasource db {
   provider = "mysql"
   url      = env("DATABASE_URL")
 }
-model User{
-  id       String   @id @default(cuid())
+model User {
+  id        Int      @id @default(autoincrement())
+  name      String
+  email     String   @unique
+  password  String
+  address   String?
+  isAdmin   Boolean  @default(false)
+  orders    Order[]
+  Review Review[]
+  Customer Customer?
+  
+}
+
+model Product {
+  id          Int      @id @default(autoincrement())
+  name        String
+  description String
+  price       Float
+  categoryId  Int
+  category    Category @relation(fields: [categoryId], references: [id])
+  orderItems  OrderItem[]
+  Review Review[]
+}
+
+model Category {
+  id          Int       @id @default(autoincrement())
+  name        String
+  description String?
+  products    Product[]
+}
+
+model Order {
+  id         Int        @id @default(autoincrement())
+  userId     Int
+  total      Float
+  status     String     @default("Pendente")
+  createdAt  DateTime   @default(now())
+  user       User       @relation(fields: [userId], references: [id])
+  orderItems OrderItem[]
+  payment    Payment?
+  @@map("order")
+}
+
+model OrderItem {
+  id        Int     @id @default(autoincrement())
+  productId Int
+  orderId   Int
+  quantity  Int
+  price     Float
+  product   Product @relation(fields: [productId], references: [id])
+  order     Order   @relation(fields: [orderId], references: [id])
+}
+
+model Payment {
+  id         Int      @id @default(autoincrement())
+  orderId    Int      @unique
+  method     String   // Ex: 'Cartão de Crédito', 'PayPal'
+  status     String   // Ex: 'Pago', 'Pendente'
+  total      Float
+  createdAt  DateTime @default(now())
+  order      Order    @relation(fields: [orderId], references: [id])
+}
+
+model Review {
+  id         Int      @id @default(autoincrement())
+  productId  Int
+  userId     Int
+  rating     Int      // Ex: 1 a 5 estrelas
+  comment    String?
+  createdAt  DateTime @default(now())
+  product    Product  @relation(fields: [productId], references: [id])
+  user       User     @relation(fields: [userId], references: [id])
+}
+
+model Customer {
+  id        Int      @id @default(autoincrement())
+  cpf       String   @unique
+  phone     String?
+  address   String?
+  city      String?
+  state     String?
+  zipCode   String?
+  userId    Int      @unique // Chave estrangeira para User
+  user      User     @relation(fields: [userId], references: [id])
+  createdAt DateTime @default(now())
+
 }
