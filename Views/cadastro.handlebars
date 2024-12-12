@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="pt-pt">
 
@@ -91,3 +92,26 @@
 </body>
 
 </html>
+=======
+<h1>Cadastro de Utilizador</h1>
+
+<form action="/create_user" method="post">
+    <input type="text" name="username" placeholder="UserName" ><br>
+    <input type="password" name="senha" placeholder="Senha"><br>
+
+    <input type="submit" value="Cadastrar">
+</form>
+
+<table>
+    <tr>
+        <td>#</td>
+        <td>Nome</td>
+    </tr>
+    {{#each users}}
+    <tr>
+        <td>{{id}}</td>
+        <td>{{username}}</td>
+    </tr>
+    {{/each}}
+</table>
+>>>>>>> 62b21158499c6e118495eb26a31555d407b1eb48

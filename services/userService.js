@@ -13,4 +13,8 @@ const findAllUsers = async() =>{
     return result
 }
 
+<<<<<<< HEAD
 module.exports = { createUser, findAllUsers }
+=======
+module.exports = { createUser, findAllUsers }
+>>>>>>> 62b21158499c6e118495eb26a31555d407b1eb48
