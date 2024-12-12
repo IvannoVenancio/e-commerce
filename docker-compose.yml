@@ -14,11 +14,14 @@ services:
       - ./:/home/app/
     networks:
       - app-network
+<<<<<<< .merge_file_rcAvCp
     depends_on:
       - mysqldb
     links:
       - mysqldb
     
+=======
+>>>>>>> .merge_file_Mbg4nh
     
   mysqldb:
     image: mysql:8.0.21
@@ -31,6 +34,14 @@ services:
      - damartec-default:/var/lib/mysql
     networks: 
      - app-network
+<<<<<<< .merge_file_rcAvCp
+=======
+
+volumes:
+  damartec-default: {}
+
+       
+>>>>>>> .merge_file_Mbg4nh
 
 volumes:
   damartec-default: {}
