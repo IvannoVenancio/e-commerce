@@ -22,9 +22,8 @@ RUN npm install
 
 COPY . .
 
-<<<<<<< HEAD
+
 CMD  npm start
 
-=======
-CMD  npm start
->>>>>>> Antonio_nunes
+
+
