@@ -16,7 +16,7 @@ services:
       - mysqldb
     links:
       - mysqldb 
-  mysqldb:
+mysqldb:
     image: mysql:8.0.21
     container_name: mysql-Damartec
     env_file:
