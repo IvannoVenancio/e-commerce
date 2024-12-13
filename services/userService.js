@@ -13,4 +13,7 @@ const findAllUsers = async() =>{
     return result
 }
 
+
 module.exports = { createUser, findAllUsers }
+module.exports = { createUser, findAllUsers }
+
