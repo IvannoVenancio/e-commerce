@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 
 FROM node:lts-alpine
 ENV NODE_ENV=production
@@ -12,7 +10,6 @@ RUN chown -R node /usr/src/app
 USER node
 CMD ["node", "index.js"]
 
->>>>>>> c15a3b850c0c274575f4c2de77cafec49f78ee47
 FROM node:20.18.0
 
 RUN mkdir -p /home/app/node_modules && chown -R node:node /home/app
@@ -27,12 +24,3 @@ COPY . .
 
 
 CMD  npm start
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
-=======
-
-
->>>>>>> Margarida_manuel
->>>>>>> c15a3b850c0c274575f4c2de77cafec49f78ee47
