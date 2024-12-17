@@ -1,0 +1,55 @@
+
+<body>
+  <div class="orders-container">
+    <table class="orders-table">
+      <thead>
+        <tr>
+          <th>Número do Pedido</th>
+          <th>Nome do Cliente</th>
+          <th>Data do Pedido</th>
+          <th>Status</th>
+          <th>Total (AOA)</th>
+        </tr>
+      </thead>
+      <tbody id="tabelaPedidos">
+       
+      </tbody>
+    </table>
+  </div>
+
+  <script>
+    // Dados de pedidos
+    const pedidos = [
+      { numero: 101, cliente: "João Silva", data: "2024-11-14", status: "Em andamento", total: 100.00 },
+      { numero: 102, cliente: "Maria Oliveira", data: "2024-11-13", status: "Concluído", total: 100.00 },
+      { numero: 103, cliente: "Carlos Santos", data: "2024-11-12", status: "Pendente", total: 100.00 },
+      { numero: 104, cliente: "Ana Costa", data: "2024-11-11", status: "Concluído", total: 100.00 }
+    ];
+
+    // Função para lista de pedidos
+    function listarPedidos() {
+      const tabela = document.getElementById('tabelaPedidos');
+      tabela.innerHTML = ''; 
+
+      pedidos.forEach(pedido => {
+        const row = document.createElement('tr');
+        row.innerHTML = `
+          <td>${pedido.numero}</td>
+          <td>${pedido.cliente}</td>
+          <td>${pedido.data}</td>
+          <td>${pedido.status}</td>
+          <td>R$ ${pedido.total.toFixed(2)}</td>
+        `;
+        tabela.appendChild(row);
+      });
+    }
+
+    document.addEventListener('DOMContentLoaded', listarPedidos);
+  </script>
+
+</body>
+
+<footer>
+    <p>&copy; 2024 DAMAR|TECH </p>
+</footer>
+</html>
