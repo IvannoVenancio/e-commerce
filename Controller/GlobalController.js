@@ -40,3 +40,18 @@ exports.Pedidos = async(req, res) => {
         console.log(err)
     }      
 }
+exports.Pedidos = async(req, res) => {    
+    try {
+        res.render("Pedidos")  
+    }catch(err){
+        console.log(err)
+    } 
+     
+}
+exports.pagamento = async(req, res) => {    
+    try {
+        res.render("Pagamento")  
+    }catch(err){
+        console.log(err)
+    } 
+}
