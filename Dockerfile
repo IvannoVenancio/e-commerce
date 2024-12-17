@@ -11,9 +11,5 @@ RUN npm install
 COPY . .
 
 
-<<<<<<< HEAD
-CMD  npm start
-=======
 CMD  npm start
 
->>>>>>> 438bb46b9f03610f34a790db808df1cc59e66103
