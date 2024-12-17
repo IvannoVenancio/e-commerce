@@ -10,11 +10,7 @@ generator client {
 }
 
 datasource db {
-<<<<<<< HEAD
-  provider = "postgresql"
-  url      = env("DATABASE_URL")
-}
-=======
+
   provider = "mysql"
   url      = env("DATABASE_URL")
 }
@@ -105,4 +101,3 @@ model Customer {
   createdAt DateTime @default(now())
 
 }
->>>>>>> main
