@@ -1,7 +1,7 @@
 version: '3.7'
 
 services:
- app:
+  app:
     build:
       context: ./
       dockerfile: Dockerfile
@@ -12,8 +12,26 @@ services:
       - ./:/home/app/
     networks:
       - app-network
+    depends_on:
+      - mysqldb
+    links:
+      - mysqldb
 
+  mysqldb:
+    image: mysql:8.0.21
+    container_name: mysql-ecommerce
+    env_file:
+      - ./.env
+    ports:
+      - 3306:3306
+    volumes:
+      - ecommerce_db_default:/var/lib/mysql
+    networks:
+      - app-network
 
 networks:
   app-network:
     driver: bridge
+
+volumes:
+  ecommerce_db_default: {}
