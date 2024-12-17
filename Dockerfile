@@ -25,5 +25,8 @@ COPY . .
 
 CMD  npm start
 
+<<<<<<< HEAD
+=======
 
 
+>>>>>>> Margarida_manuel

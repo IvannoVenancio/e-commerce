@@ -1,6 +1,9 @@
 //script.js
   document.addEventListener('DOMContentLoaded', () => { const logo = document.getElementById('siteName'); 
 // Adiciona um efeito de piscada 
+<<<<<<< HEAD
+setInterval(() => { logo.style.opacity = (logo.style.opacity == 0 ? 1 : 0); }, 1000); });
+=======
 setInterval(() => { logo.style.opacity = (logo.style.opacity == 0 ? 1 : 0); }, 1000); });
 
 const searchInput = document.getElementById('searchInput');
@@ -39,3 +42,4 @@ searchInput.addEventListener('input', filterProducts);
 products.forEach(product => {
     productList.appendChild(createProductElement(product));
 });
+>>>>>>> Margarida_manuel

@@ -7,7 +7,7 @@ exports.home = async(req, res) => {
 }
 exports.cadastro = async(req, res) => {    
     try {
-        res.render("cadastro")  
+        res.render("cadastro",{layout:"ccadastro"})  
     }catch(err){
         console.log(err)
     }      
@@ -21,7 +21,7 @@ exports.Listproduto = async(req, res) => {
 }
 exports.carrinho = async(req, res) => {    
     try {
-        res.render("carrinho",{layout:"cdmanin.handlebars"})  
+        res.render("carrinho",{layout:"cdmanin"})  
     }catch(err){
         console.log(err)
     }      
