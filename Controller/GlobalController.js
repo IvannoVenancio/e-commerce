@@ -45,5 +45,13 @@ exports.Pedidos = async(req, res) => {
         res.render("Pedidos")  
     }catch(err){
         console.log(err)
-    }      
+    } 
+     
+}
+exports.Pagamento = async(req, res) => {    
+    try {
+        res.render("Pagamento")  
+    }catch(err){
+        console.log(err)
+    } 
 }
