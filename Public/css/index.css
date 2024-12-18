@@ -202,11 +202,51 @@ display: flex;
   background-color: #0056b3;
 } 
 .footer{ 
-  background-color: #333;
- color: white;text-align: center;
-  padding: 20px; position: relative;
-   bottom: 0; width: 100%;
- }
+   background-color: #f1ebeb;
+   color: rgb(54, 52, 52);
+   text-align: center;
+   padding: 20px 0;
+   position: relative;
+   bottom: 0; 
+   width: 100%;
+}
+.footer .container {
+   display: flex;
+   flex-direction: column; 
+   align-items: center;
+}
+.footer .social-icons img{
+   margin: 10px 0; 
+} 
+.footer .social-icons a img { 
+  width: 24px;
+  height: 24px; 
+  vertical-align: middle; 
+  margin-right: 8px; 
+}
+.footer .newsletter { 
+  margin: 20px 0; 
+} 
+.footer .newsletter input[type="email"] {
+   padding: 10px; 
+   border: none;
+   border-radius: 5px;
+    margin-right: 10px; 
+}
+.footer .newsletter button { 
+  padding: 10px 20px;
+   background-color:  #007bff; 
+   color: #fff; border: none; 
+   border-radius: 5px;
+    cursor: pointer; 
+} 
+.footer .newsletter button:hover { 
+  background-color:  #01162d; 
+} 
+.footer .copyright { 
+  margin-top: 20px; 
+  font-size: 12px; 
+}
  .cart-icon {
    position: relative; 
   display: inline-block; 
@@ -247,74 +287,3 @@ display: flex;
        } 
     @keyframes slide { 
       from { transform: rotateY(0deg); } to { transform: rotateY(360deg); } }
-
-      /*.propaganda {
-        text-align: center;
-        background-color: #f2f2f2;
-        padding: 50px;
-      }
-      
-      img {
-        width: 300px;
-        border-radius: 50%;
-        box-shadow: 0px 4px 8px rgba(0,0,0,0.3);
-      }
-      
-      h2 {
-        font-size: 36px;
-        color: #333;
-        margin-top: 20px;
-      }
-      
-      p {
-        font-size: 18px;
-        color: #666;
-        margin-top: 10px;
-      }
-      
-      button {
-        background-color: #4CAF50;
-        color: white;
-        padding: 15px 32px;
-        text-align: center;
-        text-decoration: none;
-        display: inline-block;
-        font-size: 16px; 
-        margin-top: 20px;
-        border-radius: 4px;
-        cursor:  pointer;
-      }
-
-
-
-
-/*.header .search-form{
-  position: absolute;
-  top: 115%;
-  right: 7%;
-  background: #fff;
-  width: 50rem;
-  height: 5rem;
-  display: flex;
-  align-items: center;
-  transform: scaleY();
-  transform-origin: top;
-}
-.header .search-form input{
-  height: 100%;
-  width: 100%;
-  font-size: 1.6rem;
-  padding: 1rem;
-  text-transform: none;
-  color: var(--black);
-}
-.header .search-form label{
-  cursor: pointer;
-  font-size: 2.2rem;
-  margin-right: 1.5rem;
-  color: var(--black);
-}
-.header .search-form label:hover{
-  color: var(--main-color);
-}
-  0%, 20%, 100% { transform:  rotateX(0%); } 25%, 45% { transform:  rotateX(-100%); } 50%, 70% { transform:  rotateX(-200%); } 75%, 95% { transform: rotateX(-300%); } 100% { transform: rotateX(-400%); } 
