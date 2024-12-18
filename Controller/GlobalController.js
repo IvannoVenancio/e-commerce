@@ -26,6 +26,14 @@ exports.carrinho = async(req, res) => {
         console.log(err)
     }      
 }
+exports.feedback = async (req, res) => {
+    try {
+        res.render("feedback", { layout: "feedmain.handlebars" });
+    } catch (err) {
+        console.log(err);
+    }
+}
+
 exports.login = async(req, res) => {    
     try {
         res.render("login",{layout:"cdmanin.handlebars"})  
