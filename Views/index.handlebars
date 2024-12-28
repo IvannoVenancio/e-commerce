@@ -1,7 +1,10 @@
     <div class="icones">
       <div class="search-container"> <input type="text" placeholder="Search..."> <i class="fas fa-search search-icon"></i> </div>
       <ul id="productList"></ul>
-      <div class="cart-icon"> <a href="/carrinho"><i class="fas fa-shopping-cart"></i><span id="cart-count"></span></a>0</div>
+      <div class="cart-icon">
+            <img src="/images/carrinho-de-compras.png" alt="Carrinho de Compras" id="cartButton">
+            <span id="cartCount">0</span>
+        </div>
       <div class="fas-fa-bars" id="menu-bnt">
         <img src="/images/menu-hamburguer.png" alt="">
       </div>
@@ -26,27 +29,27 @@
                 <div class="product-grid">
                     <div class="product">
                         <img src="/images/iphone11.jpg" alt="Telefone 1">
-                        <h3>Telefone 1</h3>
-                        <p>R$ 1.000,00</p>
-                        <button class="add-to-cart">Adicionar ao Carrinho</button>
+                        <h3>iphone11</h3>
+                        <p>Kzs 1.000,00</p>
+                        <button class="add-to-cart" data-product="iphone11" data-price="1.200" >Adicionar ao Carrinho</button>
                     </div>
                     <div class="product">
-                        <img src="/images/iPhone 14 - 2.png" alt="Telefone 2">
-                        <h3>Telefone 2</h3>
-                        <p>R$ 1.200,00</p>
-                        <button class="add-to-cart">Adicionar ao Carrinho</button>
+                        <img src="/images/iPhone 14 - 2.png" alt="iPhone 14 ">
+                        <h3>iPhone 14 </h3>
+                        <p>Kzs 1.200,00</p>
+                        <button class="add-to-cart" data-product="iPhone 14 " data-price="1.200" >Adicionar ao Carrinho</button>
                     </div>
                         <div class="product">
-                        <img src="/images/iphone xr preto.png" alt="Telefone 2">
-                        <h3>Telefone 2</h3>
-                        <p>R$ 1.200,00</p>
-                        <button class="add-to-cart">Adicionar ao Carrinho</button>
+                        <img src="/images/iphone xr preto.png" alt="iphone xr preto">
+                        <h3>iphone xr preto</h3>
+                        <p>Kzs 1.200,00</p>
+                        <button class="add-to-cart" data-product="iphone xr preto" data-price="1.200" >Adicionar ao Carrinho</button>
                     </div>
                         <div class="product">
-                        <img src="/images/S23Ultra.jpg" alt="Telefone 2">
-                        <h3>Telefone 2</h3>
-                        <p>R$ 1.200,00</p>
-                        <button class="add-to-cart">Adicionar ao Carrinho</button>
+                        <img src="/images/S23Ultra.jpg" alt="S24Ultra">
+                        <h3>S24Ultra</h3>
+                        <p>Kzs 1.200,00</p>
+                        <button class="add-to-cart" data-product="S24Ultra" data-price="1.200" >Adicionar ao Carrinho</button>
                     </div>
                     
                     <!-- Adicione mais produtos conforme necessário -->
@@ -59,27 +62,27 @@
                 <div class="product-grid">
                     <div class="product">
                         <img src="/images/computador all-in-one 23.8 (1).png" alt="Telefone 1">
-                        <h3>Telefone 1</h3>
-                        <p>R$ 1.000,00</p>
-                        <button class="add-to-cart">Adicionar ao Carrinho</button>
+                        <h3>computador all-in-one</h3>
+                        <p>Kzs 1.000,00</p>
+                        <button class="add-to-cart" data-product="computador all-in-one" data-price="1.000" >Adicionar ao Carrinho</button>
                     </div>
                     <div class="product">
                         <img src="/images/computador gamer.png" alt="Telefone 2">
-                        <h3>Telefone 2</h3>
-                        <p>R$ 1.200,00</p>
-                        <button class="add-to-cart">Adicionar ao Carrinho</button>
+                        <h3>Computador game</h3>
+                        <p>Kzs 1.200,00</p>
+                        <button class="add-to-cart" data-product="Computador game" data-price="1.200" >Adicionar ao Carrinho</button>
                     </div>
-                                        <div class="product">
+                    <div class="product">
                         <img src="/images/laptop-with-blank-black-screen-white-table.jpg" alt="Telefone 2">
                         <h3>Telefone 2</h3>
-                        <p>R$ 1.200,00</p>
-                        <button class="add-to-cart">Adicionar ao Carrinho</button>
+                        <p>Kzs 1.200,00</p>
+                        <button class="add-to-cart" data-product="Laptop" data-price="1.200" >Adicionar ao Carrinho</button>
                     </div>
-                                        <div class="product">
+                    <div class="product">
                         <img src="/images/laptop-device-with-minimalist-monochrome-background.jpg" alt="Telefone 2">
-                        <h3>Telefone 2</h3>
-                        <p>R$ 1.200,00</p>
-                        <button class="add-to-cart">Adicionar ao Carrinho</button>
+                        <h3>Laptop</h3>
+                        <p>Kzs 1.200,00</p>
+                        <button class="add-to-cart" data-product="Laptop" data-price="1.200" >Adicionar ao Carrinho</button>
                     </div>
                     
                     <!-- Adicione mais produtos conforme necessário -->
@@ -97,5 +100,15 @@
                 </div>
         </section>
     </main>
+    <!-- Modal do carrinho -->
+    <div id="cartModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Carrinho de Compras</h2>
+            <ul id="cartItems"></ul>
+            <p>Total: Kzs <span id="cartTotal">0</span></p>
+            <button id="checkoutButton">Ver Carrinho</button>
+        </div>
+    </div>
 
 <script src="/js/home.js"></script>
