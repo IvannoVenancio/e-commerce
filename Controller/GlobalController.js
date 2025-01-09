@@ -26,6 +26,14 @@ exports.carrinho = async(req, res) => {
         console.log(err)
     }      
 }
+exports.feedback = async (req, res) => {
+    try {
+        res.render("feedback", { layout: "feedmain.handlebars" });
+    } catch (err) {
+        console.log(err);
+    }
+}
+
 exports.login = async(req, res) => {    
     try {
         res.render("login",{layout:"cdmanin.handlebars"})  
@@ -50,7 +58,7 @@ exports.Pedidos = async(req, res) => {
 }
 exports.pagamento = async(req, res) => {    
     try {
-        res.render("Pagamento")  
+        res.render("pagamento" ,{layout:"ccadastro"})  
     }catch(err){
         console.log(err)
     } 
