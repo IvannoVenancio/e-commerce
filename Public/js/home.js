@@ -1,9 +1,9 @@
-<<<<<<< HEAD
+
 //script.js
   document.addEventListener('DOMContentLoaded', () => { const logo = document.getElementById('siteName'); 
 // Adiciona um efeito de piscada 
+
 setInterval(() => { logo.style.opacity = (logo.style.opacity == 0 ? 1 : 0); }, 1000); });
-=======
 document.getElementById('promoButton').addEventListener('click', function() {
     alert('Descubra mais sobre o iPhone 16!');
 });
@@ -64,4 +64,3 @@ function viewCart() {
     });
     cartTotal.textContent = total.toFixed(2);
 }
->>>>>>> origin/Margarida_manuel

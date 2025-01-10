@@ -1,6 +1,6 @@
 const express = require('express')
 const indexRoutes = express.Router()
-<<<<<<< HEAD
+
 const GlobalController = require('../Controller/GlobalController')
 const ClienteController = require('../Controller/ClienteController')
 
@@ -10,10 +10,10 @@ indexRoutes.get('/cliente', ClienteController.home)
 
 
 module.exports = indexRoutes;
-=======
+
 const { upload } = require('../middleware/multer')
-const GlobalController = require('../controller/GlobalController')
-const ClienteController = require('../controller/ClienteController')
+const GlobalController = require('../controller/UserController')
+const ClienteController = require('../controller/UserController')
 const UserController = require('../controller/UserController')
 
 
@@ -32,8 +32,3 @@ indexRoutes.get('/pagamento', GlobalController.pagamento)
 
 module.exports = indexRoutes;
 
-
-
-
-
->>>>>>> origin/Margarida_manuel

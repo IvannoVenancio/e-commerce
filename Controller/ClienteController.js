@@ -4,8 +4,7 @@ exports.home = async(req, res) => {
     }catch(err){
         console.log(err)
     }      
-<<<<<<< HEAD
-=======
+
 }
 const { findAllClientes, createCliente } = require("../services/ClienteService")
 
@@ -29,5 +28,4 @@ exports.create = async(req, res) =>{
     } catch (error) {
         console.log(error)
     }
->>>>>>> origin/Margarida_manuel
 }
