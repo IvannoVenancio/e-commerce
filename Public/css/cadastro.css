@@ -194,3 +194,74 @@ h1{
     position: relative;
     top: 15px
 }
+
+footer{
+    position: fixed;
+    bottom: 0;
+    color: #fff;
+    width: 100%;
+    background-color: #535151; 
+    text-align: center; /* Centraliza o texto */
+    padding: 10px 0; /* Espaçamento interno */
+}
+
+
+.header {
+    position: fixed; /* Fixa o header no topo da página */
+    top: 0; /* Posiciona no topo */
+    left: 0; /* Alinha à esquerda */
+    width: 100%; /* Faz o header ocupar toda a largura da página */
+    background-color: #020034; /* Cor de fundo do header */
+    color: white; /* Cor do texto */
+    z-index: 1000; /* Garante que o header fique acima de outros elementos */
+    display: flex; /* Define um layout flexível */
+    align-items: center; /* Alinha verticalmente os itens */
+    padding: 10px 20px; /* Espaçamento interno */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Adiciona uma sombra para destaque */
+}
+
+/* Estilização para o link da logo */
+.logo {
+    text-decoration: none; /* Remove o sublinhado do link */
+    color: white; /* Define a cor do texto */
+    font-size: 1.5rem; /* Tamanho da fonte */
+    font-weight: bold; /* Negrito */
+}
+
+/* Adiciona margem ao corpo para não ficar sobreposto pelo header */
+body {
+    margin-top: 60px; /* Ajuste conforme a altura do header */
+}
+
+
+/* Centralizar o botão na div */
+.continue-button {
+    display: flex; /* Ativa o flexbox */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    height: 100%; /* Ajuste opcional para garantir altura consistente */
+    margin-top: 20px; /* Espaçamento opcional acima da div */
+}
+
+/* Estilização para o botão */
+.continue-button input[type="submit"] {
+    background-color: #007BFF; /* Cor azul */
+    color: white; /* Cor do texto branco */
+    border: none; /* Remove as bordas */
+    border-radius: 5px; /* Arredonda as bordas */
+    padding: 10px 20px; /* Adiciona espaçamento interno */
+    font-size: 1rem; /* Define o tamanho do texto */
+    font-weight: bold; /* Deixa o texto em negrito */
+    cursor: pointer; /* Mostra o cursor de mão ao passar o mouse */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Efeito de transição */
+}
+
+/* Estilo ao passar o mouse */
+.continue-button input[type="submit"]:hover {
+    background-color: #0056b3; /* Azul mais escuro ao passar o mouse */
+    transform: scale(1.05); /* Leve aumento do botão */
+}
+
+/* Estilo ao clicar */
+.continue-button input[type="submit"]:active {
+    transform: scale(0.95); /* Reduz levemente o botão ao clicar */

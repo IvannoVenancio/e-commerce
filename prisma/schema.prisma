@@ -105,4 +105,4 @@ model Customer {
   createdAt DateTime @default(now())
 
 }
->>>>>>> main
+
