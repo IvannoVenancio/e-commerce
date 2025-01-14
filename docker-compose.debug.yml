@@ -1,18 +1,32 @@
-version: '3.4'
-
 services:
-  ecommerce:
-    image: ecommerce
-    build:
-      context: .
-      dockerfile: ./Dockerfile
-    environment:
-      NODE_ENV: development
-    ports:
-
-      - 3000:3000
-
-      - 3001:3001
-
-      - 9229:9229
-    command: ["node", "--inspect=0.0.0.0:9229", "index.js"]
+app:
+ biud:
+   context:
+   dockerfile: Dockerfile
+ container_name: node-app
+ ports:
+  - 3000:3000
+ volumes:
+   - ./:/home/app
+ networks:
+  - app-network
+ depends_on:
+   - mysqldb
+ links:
+   - mysqldb
+mysqldb:
+  image: mysql:8.0.21
+  container_name: mysql-Damartec
+  env_file:
+   - ./.env
+  ports:
+   - 3306:3306
+  volumes:
+   - damartec-default:/var/lib/mysql
+  networks:
+   - app-network
+volumes:
+  damartec-default: {}
+networks:
+  app-network:
+   driver: bridge

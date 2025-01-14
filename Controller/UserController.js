@@ -11,8 +11,9 @@ exports.view = async(req, res) =>{
 exports.create = async(req, res) =>{
     try {
         const data = req.body
-        await createUser(data)
-        res.redirect('/')
+        const foto= req.file.filename
+        await createUser({...data,foto})
+        res.redirect('/cadastro')
         
     } catch (error) {
         console.log("error:::", error)

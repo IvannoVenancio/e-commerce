@@ -1,5 +1,3 @@
-
-
 FROM node:20.18.0
 
 RUN mkdir -p /home/app/node_modules && chown -R node:node /home/app
@@ -14,7 +12,4 @@ COPY . .
 
 
 CMD  npm start
-
-
-
 
