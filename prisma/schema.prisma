@@ -102,9 +102,4 @@ model Customer {
   user      User     @relation(fields: [userId], references: [id])
   createdAt DateTime @default(now())
 
-<<<<<<< HEAD
 }
-
-=======
-}
->>>>>>> 4c979c53b939f09e30fd37da91b6152ad42374ae
