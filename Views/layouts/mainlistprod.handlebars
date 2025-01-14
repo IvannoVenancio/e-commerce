@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>listproduto</title>
+  <link rel="stylesheet" href="/css/listproduto.css">
+   <header>
+    <nav>
+        <a href="/Views/Listproduto.handlebars">Produtos</a>
+        <a href="/Views/Pedidos.handlebars">Pedidos</a>
+    </nav>
+</head>
+<body>
+  <header class="header">
+     <a href="/" class="logo">Damartec</a>
+  </header>
+    {{{body}}}
+
+   <script>
+async function listarClientes() {
+    const response = await fetch('http://localhost:3000/clientes');
+    const clientes = await response.json();
+    
+    const lista = document.getElementById('listaClientes');
+    lista.innerHTML = '';
+    clientes.forEach(cliente => {
+      const item = document.createElement('li');
+      item.textContent = `${cliente.nome} - ${cliente.email}`;
+      lista.appendChild(item);
+    });
+  }
+    async function cadastrarProduto() {
+      const nome = document.getElementById('nomeProduto').value;
+      const estoque = document.getElementById('estoqueProduto').value;
+      const preco = document.getElementById('precoProduto').value;
+
+      const response = await fetch('http://localhost:3000/produtos', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ nome, estoque: parseInt(estoque), preco: parseFloat(preco) })
+      });
+
+      const produto = await response.json();
+      alert(`Produto cadastrado: ${produto.nome}`);
+      listarProdutos();
+    }
+
+    async function listarProdutos() {
+      const response = await fetch('http://localhost:3000/produtos');
+      const produtos = await response.json();
+
+      const lista = document.getElementById('listaProdutos');
+      lista.innerHTML = '';
+      produtos.forEach(produto => {
+        const item = document.createElement('li');
+        item.textContent = `${produto.nome} - Em estoque: ${produto.estoque}`;
+        lista.appendChild(item);
+        
+        tabela.innerHTML = `
+        <tr>
+          <th>Nome</th>
+           <th>Descrição</th>
+          <th>Preço</th>
+          <th>Quantidade</th>
+        </tr>
+      `;
+  
+      });
+    }
+
+</script>
+<script src="/js/listproduto.js"></script>
+
+  <footer>
+    <p>&copy; 2024 DAMARTEC </p>
+</footer>
+
+</body>
+</html>

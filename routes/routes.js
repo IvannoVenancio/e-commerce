@@ -12,8 +12,8 @@ indexRoutes.get('/cliente', ClienteController.home)
 module.exports = indexRoutes;
 
 const { upload } = require('../middleware/multer')
-const GlobalController = require('../controller/UserController')
-const ClienteController = require('../controller/UserController')
+//const GlobalController = require('../controller/UserController')
+//const ClienteController = require('../controller/UserController')
 const UserController = require('../controller/UserController')
 
 
