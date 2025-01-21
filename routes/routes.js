@@ -19,6 +19,9 @@ indexRoutes.get('/pagamento', GlobalController.pagamento)
 
 
 
+
+
+
 module.exports = indexRoutes;
 
 

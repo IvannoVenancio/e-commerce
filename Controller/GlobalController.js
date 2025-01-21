@@ -58,7 +58,7 @@ exports.Pedidos = async(req, res) => {
 }
 exports.pagamento = async(req, res) => {    
     try {
-        res.render("pagamento" ,{layout:"ccadastro"})  
+        res.render("pagamento" ,{layout:"ppagamento"})  
     }catch(err){
         console.log(err)
     } 
