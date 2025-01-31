@@ -14,7 +14,7 @@ indexRoutes.get('/carrinho', GlobalController.carrinho)
 indexRoutes.get('/cliente', ClienteController.home)
 indexRoutes.get('/feedback', GlobalController.feedback)
 indexRoutes.get('/login', UserController.view)
-indexRoutes.post('/create_user',upload.single('foto'), UserController.create)
+indexRoutes.post('/create_user', UserController.create)
 indexRoutes.get('/pagamento', GlobalController.pagamento)
 
 
