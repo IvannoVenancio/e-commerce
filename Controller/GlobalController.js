@@ -36,7 +36,7 @@ exports.feedback = async (req, res) => {
 
 exports.login = async(req, res) => {    
     try {
-        res.render("login",{layout:"cdmanin.handlebars"})  
+        res.render("login",{layout:"clogin"})  
     }catch(err){
         console.log(err)
     }      
@@ -63,3 +63,4 @@ exports.pagamento = async(req, res) => {
         console.log(err)
     } 
 }
+

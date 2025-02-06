@@ -24,7 +24,7 @@ model User {
   isAdmin   Boolean  @default(false)
   orders    Order[]
   Review Review[]
-  foto   String @db.VarChar(255)
+  
   Customer Customer?
   
 }
