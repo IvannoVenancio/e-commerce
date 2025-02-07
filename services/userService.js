@@ -12,8 +12,12 @@ const findAllUsers = async() =>{
     const result = await User.findMany()    
     return result
 }
+const findbyemail = async(email) =>{
+    const result = await User.findUnique({
+        where {email},
+    })    
+    return result
+}
 
-
-module.exports = { createUser, findAllUsers }
-module.exports = { createUser, findAllUsers }
-
+module.exports = { createUser, findAllUsers,findbyemail }
+module.exports = { createUser, findAllUsers,findbyemail }
