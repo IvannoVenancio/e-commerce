@@ -1,4 +1,5 @@
-const { createUser, findAllUsers } = require("../services/userService")
+const { createUser, findAllUsers, findUserBYEmail } = require("../services/userService")
+
 
 exports.view = async(req, res) =>{
     try {
@@ -18,4 +19,9 @@ exports.create = async(req, res) =>{
     } catch (error) {
         console.log("error:::", error)
     }
+
 }
+
+
+
+

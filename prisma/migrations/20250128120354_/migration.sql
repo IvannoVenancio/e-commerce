@@ -1,11 +1,13 @@
 -- CreateTable
 CREATE TABLE `User` (
     `id` INTEGER NOT NULL AUTO_INCREMENT,
-    `name` VARCHAR(191) NOT NULL,
+    `firstname` VARCHAR(191) NOT NULL,
+    `lastname` VARCHAR(191) NOT NULL,
     `email` VARCHAR(191) NOT NULL,
     `password` VARCHAR(191) NOT NULL,
     `address` VARCHAR(191) NOT NULL,
     `isAdmin` BOOLEAN NOT NULL DEFAULT false,
+    `foto` VARCHAR(255) NOT NULL,
 
     UNIQUE INDEX `User_email_key`(`email`),
     PRIMARY KEY (`id`)
@@ -60,6 +62,19 @@ CREATE TABLE `Payment` (
     `method` VARCHAR(191) NOT NULL,
     `status` VARCHAR(191) NOT NULL,
     `total` DOUBLE NOT NULL,
+    `firstname` VARCHAR(191) NOT NULL,
+    `lastname` VARCHAR(191) NOT NULL,
+    `email` VARCHAR(100) NOT NULL,
+    `endereco` VARCHAR(255) NOT NULL,
+    `cidade` VARCHAR(100) NOT NULL,
+    `estado` VARCHAR(100) NOT NULL,
+    `zip_code` VARCHAR(20) NOT NULL,
+    `nome_cartao` VARCHAR(100) NOT NULL,
+    `numero_cartao` VARCHAR(20) NOT NULL,
+    `exp_mes` INTEGER NOT NULL,
+    `exp_ano` INTEGER NOT NULL,
+    `cvv` VARCHAR(10) NOT NULL,
+    `data_pagamento` DATETIME(3) NOT NULL DEFAULT CURRENT_TIMESTAMP(3),
     `createdAt` DATETIME(3) NOT NULL DEFAULT CURRENT_TIMESTAMP(3),
 
     UNIQUE INDEX `Payment_orderId_key`(`orderId`),
