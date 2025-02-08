@@ -6,6 +6,7 @@ let key = 0;
 const c = (el)=>document.querySelector(el); 
 const cs = (el)=>document.querySelectorAll(el);
 
+
 //Vamos mapear os dados recebidos via Json e criar a lista de produtos
 modelsJson.map((item, index)=>{
    
@@ -172,3 +173,9 @@ function updateCart() {
         c('aside').style.left = '100vw';
     }
 }
+c('.cart--finalizar').addEventListener('click', function(){
+    if(cart.length>0)
+    window.location.href ='/pagamento';
+})
+
+
