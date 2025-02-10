@@ -38,7 +38,18 @@ exports.login = async(req, res) => {
 
 exports.pagamento = async(req, res) => {    
     try {
-        res.render("pagamento" ,{layout:"ccadastro"})  
+        res.render("pagamento" ,{layout:"ppagamento"})  
+    }catch(err){
+        console.log(err)
+    } 
+}
+exports.finalizarPagamento = async(req, res) => {    
+    try {
+        const data = req.body
+        console.log("Body::::", req.body)
+        const pagamento = await registrarCompra(data)
+        console.log("pagamento:::", pagamento)
+        res.render("pagamentoconfirmado" ,{layout:"ppagamento", pagamento})  
     }catch(err){
         console.log(err)
     } 
