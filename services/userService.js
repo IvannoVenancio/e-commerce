@@ -12,12 +12,13 @@ const findAllUsers = async() =>{
     const result = await User.findMany()    
     return result
 }
-const findbyemail = async(email) =>{
+async function findbyemail(email) {
     const result = await User.findUnique({
-        where {email},
-    })    
+        where
+    }, { email })
     return result
-}
+}    
+   
 
 module.exports = { createUser, findAllUsers,findbyemail }
 module.exports = { createUser, findAllUsers,findbyemail }

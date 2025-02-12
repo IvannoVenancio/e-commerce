@@ -71,10 +71,22 @@ model OrderItem {
 
 model Payment {
   id         Int      @id @default(autoincrement())
-  orderId    Int      @unique
-  method     String   // Ex: 'Cartão de Crédito', 'PayPal'
-  status     String   // Ex: 'Pago', 'Pendente'
-  total      Float
+  orderId    Int     @unique
+  method     String?   // Ex: 'Cartão de Crédito', 'PayPal'
+  status     String?  // Ex: 'Pago', 'Pendente'
+  total      Float?
+  nome_completo     String
+ email          String   @db.VarChar(100)
+  endereco       String   @db.VarChar(255)
+  cidade         String   @db.VarChar(100)
+  estado         String   @db.VarChar(100)
+  zip_code       String   @db.VarChar(20)
+  nome_cartao    String   @db.VarChar(100)
+  numero_cartao  String   @db.VarChar(20)
+  exp_mes        Int
+  exp_ano        Int
+  cvv            String   @db.VarChar(10)
+  data_pagamento DateTime @default(now())
   createdAt  DateTime @default(now())
   order      Order    @relation(fields: [orderId], references: [id])
 }

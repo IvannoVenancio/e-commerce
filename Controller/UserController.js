@@ -26,6 +26,8 @@ exports.create = async (req, res) => {
     }
 };
 
+
+
 // Função para processar login do usuário
 exports.login = async (req, res) => {
     try {
@@ -66,7 +68,13 @@ exports.login = async (req, res) => {
         };
         console.log(" Sessão Criada:", req.session);
 
-        res.redirect("/carrinho");  // Redireciona para a página principal após o login
+        //Redirecionamento com base no tipo de usuário
+        if (user.role === "admin") {
+            return res.redirect("/Listprodutos"); // Redireciona admin
+        } else {
+            return res.redirect("/carrinho"); // Redireciona usuário comum
+        }
+
     } catch (error) {
         console.log("Erro no login:", error);
         res.status(500).send("Erro interno do servidor");
