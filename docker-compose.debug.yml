@@ -6,7 +6,7 @@ services:
       dockerfile: ./Dockerfile
     environment:
       NODE_ENV: development
-    ports:
+  ports:
    - 3306:3306
   volumes:
    - damartec-default:/var/lib/mysql
