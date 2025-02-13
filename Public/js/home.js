@@ -13,7 +13,7 @@ const cartItemsList = document.getElementById('cartItems');
 const cartTotal = document.getElementById('cartTotal');
 const checkoutButton = document.getElementById('checkoutButton');
 
-addToCartButtons.forEach(button => {
+Buttons.forEach(button => {
     button.addEventListener('click', function() {
         const product = this.getAttribute('data-product');
         const price = parseFloat(this.getAttribute('data-price'));
@@ -58,3 +58,14 @@ function viewCart() {
     });
     cartTotal.textContent = total.toFixed(2);
 }
+//banner
+document.addEventListener('DOMContentLoaded', function() {
+    const advertisements = document.querySelectorAll('.advertisement');
+
+    advertisements.forEach((ad, index) => {
+        setTimeout(() => {
+            ad.classList.add('animate__fadeIn');
+        }, index * 500); // Delay each animation by 500ms
+    });
+});
+//carrossel

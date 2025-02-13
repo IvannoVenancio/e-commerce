@@ -82,8 +82,6 @@ display: flex;
 .header .icones :hover{
   color: var(--main-color);
 }
-
-
 .header .icones .fas-fa-bar img{
   cursor: pointer;
   display: flex;
@@ -286,64 +284,6 @@ promo {
   from { transform: translateX(-100%); }
   to { transform: translateX(0); }
 }
-.products {
-  padding: 2rem 0;
-}
-
-.products h2 {
-  text-align: center;
-  margin-bottom: 2rem;
-  font-size: 2rem;
-}
-
-.product-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
-  justify-content: center;
-}
-
-.product {
-  background-color: #fff;
-  border: 1px solid #ddd;
-  padding: 1rem;
-  text-align: center;
-  width: 200px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s;
-}
-
-.product img {
-  max-width: 100%;
-  height: auto;
-}
-
-.product h3 {
-  margin: 1rem 0 0.5rem;
-}
-
-.product p {
-  font-size: 1.2rem;
-  color: #333;
-}
-
-.product button {
-  background-color: #333;
-  color: #fff;
-  border: none;
-  padding: 0.5rem 1rem;
-  font-size: 1rem;
-  cursor: pointer;
-  margin-top: 1rem;
-}
-
-.product button:hover {
-  background-color: #555;
-}
-
-.product:hover {
-  transform: scale(1.05);
-}
 about-us {
   padding: 2rem 0;
   text-align: center;
@@ -456,5 +396,54 @@ about-us {
   padding: 0.2rem 0.5rem;
   font-size: 0.8rem;
 }
+.advertisement-grid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
 
+.large-banner {
+  width: 100%;
+}
 
+.small-banners {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  gap: 20px;
+}
+
+.small-banner {
+  width: 48%;
+}
+
+.advertisement img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.advertisement h3 {
+  margin: 10px 0;
+  font-size: 1.5rem;
+}
+
+.advertisement p {
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+.advertisement button {
+  background-color: #007aff;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.advertisement button:hover {
+  background-color: #005bb5;
+}
