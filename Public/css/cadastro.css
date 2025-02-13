@@ -5,7 +5,15 @@
     font-family: 'Inter', sans-serif; /* Define a fonte 'Inter' como padrão para todos os textos */
 }
 
+<<<<<<< HEAD
 /* Estiliza o corpo da página */
+=======
+<<<<<<< HEAD:Public/CSS/cadastro.css
+=======
+
+
+>>>>>>> origin/Margarida_manuel:Public/css/cadastro.css
+>>>>>>> 9adea94f4749b7d296daa299341ed7f3e82572ed
 body {
     width: 100%; /* Define a largura total da página */
     height: 100vh; /* Define a altura da página como 100% da altura da tela */
@@ -14,6 +22,7 @@ body {
     align-items: center; /* Centraliza o conteúdo verticalmente */
     background: #f3f3f44d; /* Define uma cor de fundo com opacidade */
 }
+<<<<<<< HEAD
 
 /* Estilos para o container do formulário */
 .container {
@@ -24,6 +33,24 @@ body {
     align-items: center; /* Centraliza o conteúdo verticalmente */
     margin: 0 auto; /* Centraliza o container horizontalmente */
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.212); /* Adiciona uma sombra suave no container */
+=======
+<<<<<<< HEAD:Public/CSS/cadastro.css
+
+=======
+>>>>>>> origin/Margarida_manuel:Public/css/cadastro.css
+.container {
+    width: 80%;
+    height: 80vh;
+    display: flex;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.212);
+<<<<<<< HEAD:Public/CSS/cadastro.css
+=======
+    justify-content: center;
+    align-items: center;
+    align-items: center;
+   
+>>>>>>> origin/Margarida_manuel:Public/css/cadastro.css
+>>>>>>> 9adea94f4749b7d296daa299341ed7f3e82572ed
 }
 
 
@@ -34,12 +61,28 @@ body {
 
 /* Estiliza o formulário */
 .form {
+<<<<<<< HEAD
     width: 50%; /* Largura do formulário (50% da tela) */
     display: flex; /* Ativa o flexbox dentro do formulário */
     flex-direction: column; /* Organiza os itens do formulário na vertical */
     justify-content: center; /* Alinha os itens do formulário verticalmente ao centro */
     padding: 3rem; /* Adiciona preenchimento interno */
     align-items: center; /* Centraliza os itens do formulário horizontalmente */
+=======
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+<<<<<<< HEAD:Public/CSS/cadastro.css
+    align-items: center;
+    background-color: #fff;
+    padding: 3rem;
+=======
+    padding: 3rem;
+    align-items: center;
+
+>>>>>>> origin/Margarida_manuel:Public/css/cadastro.css
+>>>>>>> 9adea94f4749b7d296daa299341ed7f3e82572ed
 }
 
 /* Cabeçalho do formulário */
@@ -49,7 +92,15 @@ body {
     justify-content: space-between; /* Espaça os elementos do cabeçalho */
 }
 
+<<<<<<< HEAD
 /* Linha abaixo do título no cabeçalho */
+=======
+<<<<<<< HEAD:Public/CSS/cadastro.css
+
+
+=======
+>>>>>>> origin/Margarida_manuel:Public/css/cadastro.css
+>>>>>>> 9adea94f4749b7d296daa299341ed7f3e82572ed
 .form-header h1::after {
     content: ''; /* Cria um elemento fictício */
     display: block; /* Torna o elemento visível */
@@ -233,4 +284,56 @@ body {
         overflow-y: scroll; /* Permite rolagem vertical se necessário */
         flex-wrap: nowrap; /* Evita que os inputs se movam*/
     }
+<<<<<<< HEAD
+=======
+    .gender-inputs {
+        margin-top: 2rem;
+    }
+    .gender-group {
+        flex-direction: column;
+    }
+    .gender-title h6 {
+        margin: 0;
+    }
+    .gender-input {
+        margin-top: 0.5rem;
+    }
+}
+
+h1{
+    position: relative;
+    top: 15px
+<<<<<<< HEAD:Public/CSS/cadastro.css
+=======
+}
+.header .logo{
+    height: 0rem;
+    font-family: 'Arial', sans-serif; 
+    font-size: 3rem;
+    font-weight: bold;
+    color: #0f0559; 
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    text-decoration: none;
+    margin-right: 20px;
+    
+  
+}
+.header .logo:hover{
+    transform: scale(1.1);
+}
+.footer{ 
+    background-color: #f1ebeb;
+    color: rgb(54, 52, 52);
+    text-align: center;
+    padding: 20px 0;
+    position: relative;
+    bottom: 0; 
+    width: 100%;
+}
+.footer .copyright { 
+    margin-top: 0px; 
+    font-size: 12px; 
+>>>>>>> origin/Margarida_manuel:Public/css/cadastro.css
+>>>>>>> 9adea94f4749b7d296daa299341ed7f3e82572ed
 }

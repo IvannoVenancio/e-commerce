@@ -1,7 +1,7 @@
 version: '3.7'
 
 services:
-  app:
+ app:
     build:
       context: ./
       dockerfile: Dockerfile
@@ -14,8 +14,8 @@ services:
       - app-network
     links:
       - mysqldb
-
-  mysqldb:
+      
+ mysqldb:
    image: mysql:8.0.21
    container_name: mysql-ecommerce
    env_file:
@@ -27,10 +27,9 @@ services:
    networks:
    - app-network
 
-
-networks:
+ networks:
   app-network:
     driver: bridge
 
-volumes:
+ volumes:
   damartec-default: {}

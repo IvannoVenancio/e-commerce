@@ -1,3 +1,9 @@
+
+//script.js
+  document.addEventListener('DOMContentLoaded', () => { const logo = document.getElementById('siteName'); 
+// Adiciona um efeito de piscada 
+
+setInterval(() => { logo.style.opacity = (logo.style.opacity == 0 ? 1 : 0); }, 1000); });
 document.getElementById('promoButton').addEventListener('click', function() {
     alert('Descubra mais sobre o iPhone 16!');
 });
@@ -58,6 +64,7 @@ function viewCart() {
     });
     cartTotal.textContent = total.toFixed(2);
 }
+<<<<<<< HEAD
 //banner
 document.addEventListener('DOMContentLoaded', function() {
     const advertisements = document.querySelectorAll('.advertisement');
@@ -69,3 +76,5 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 //carrossel
+=======
+>>>>>>> 9adea94f4749b7d296daa299341ed7f3e82572ed

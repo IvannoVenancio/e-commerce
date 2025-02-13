@@ -14,7 +14,8 @@ exports.cadastro = async(req, res) => {
 }
 exports.Listproduto = async(req, res) => {    
     try {
-        res.render("Listproduto")  
+        const produtos = [{"name":"Daria"}] //await findAllProdutos()
+        res.render("Listproduto",{layout:"mainlistprod", produtos})  
     }catch(err){
         console.log(err)
     }      
@@ -50,11 +51,10 @@ exports.Pedidos = async(req, res) => {
 }
 exports.Pedidos = async(req, res) => {    
     try {
-        res.render("Pedidos")  
+        res.render("Pedidos",{layout:"ppedidos", Pedidos})  
     }catch(err){
         console.log(err)
-    } 
-     
+    }   
 }
 exports.pagamento = async(req, res) => {    
     try {
