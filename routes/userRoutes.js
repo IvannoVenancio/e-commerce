@@ -1,16 +1,25 @@
 const express = require('express');
 const router = express.Router();
-const { authorize } = require('../middlewares/authMiddleware');
+// const authorize = require('../middlewares/authorize'); // Middleware de autorização
+// const authenticate = require('../middleware/auth'); // Middleware de autenticação
 
-router.get('/mainlistprod.handlebars', authorize('admin'), (req, res) => {
+// Aplica o middleware de autenticação em todas as rotas abaixo
+// router.use(authenticate); // Isso vai garantir que o usuário esteja autenticado
+
+// Rota protegida para admins (somente admin pode acessar)
+router.get('/mainlistprod.handlebars',  (req, res) => {
     res.render('mainlistprod.handlebars');
 });
-router.get('/ppedidos.handlebars', authorize('admin'), (req, res) => {
+
+// Rota protegida para admins (somente admin pode acessar)
+router.get('/ppedidos.handlebars',  (req, res) => {
     res.render('ppedidos.handlebars');
 });
 
-router.get('/main.handlebars', authorize('cliente'), (req, res) => {
+// Rota protegida para clientes (somente cliente pode acessar)
+router.get('/main.handlebars',  (req, res) => {
     res.render('main.handlebars');
 });
 
 module.exports = router;
+

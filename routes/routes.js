@@ -1,34 +1,41 @@
-const express = require('express')
-const indexRoutes = express.Router()
+const express = require('express');
+const indexRoutes = express.Router();
 
-const GlobalController = require('../Controller/GlobalController')
-const ClienteController = require('../Controller/ClienteController')
+// Importação correta dos controladores
+const GlobalController = require('../Controller/GlobalController');
+const ClienteController = require('../Controller/ClienteController');
+const UserController = require('../Controller/UserController');
+const PedidosController = require('../Controller/PedidosController'); // Correção aqui
+const { upload } = require('../middleware/multer');
+const ProdutoController = require('../Controller/ProdutoController');
+const { createUser, findAllUsers } = require("../services/userService");
 
+// Defina as rotas de forma clara
+indexRoutes.get('/', GlobalController.home);
+indexRoutes.get('/cadastro', GlobalController.cadastro);
+indexRoutes.get('/Pedidos', PedidosController.Pedidos); // A rota já estava correta
+indexRoutes.get('/Listproduto', ProdutoController.Listproduto);
+indexRoutes.get('/carrinho', GlobalController.carrinho);
+indexRoutes.get('/cliente', ClienteController.home);
+indexRoutes.get('/feedback', GlobalController.feedback);
+indexRoutes.get('/login', UserController.view);
+indexRoutes.post('/login', UserController.login);
 
-indexRoutes.get('/', GlobalController.home)
-indexRoutes.get('/cliente', ClienteController.home)
+// Use a função createUser corretamente sem conflito
+indexRoutes.post('/create_user', upload.single('foto'), (req, res) => {
+    
+  createUser(req.body)
+    .then(user => {
+        res.redirect("/cadastro")
+    //   res.status(201).send(user);
+    })
+    .catch(err => {
+      res.status(400).send({ message: 'Erro ao criar o usuário', error: err });
+    });
+});
 
+indexRoutes.get('/pagamento', GlobalController.pagamento);
+indexRoutes.post('/pagamento', GlobalController.finalizarPagamento);
 
 module.exports = indexRoutes;
 
-const { upload } = require('../middleware/multer')
-const GlobalController = require('../controller/UserController')
-const ClienteController = require('../controller/UserController')
-const UserController = require('../controller/UserController')
-const { PedidosController } = require('../Controller/PedidosController')
-
-
-indexRoutes.get('/', GlobalController.home)
-indexRoutes.get('/cadastro', GlobalController.cadastro)
-indexRoutes.get('/Pedidos', PedidosController.Pedidos)
-indexRoutes.get('/Listproduto', ProdutoController.Listproduto)
-indexRoutes.get('/carrinho', GlobalController.carrinho)
-indexRoutes.get('/cliente', ClienteController.home)
-indexRoutes.get('/feedback', GlobalController.feedback)
-indexRoutes.get('/login', UserController.view)
-indexRoutes.post('/create_user',upload.single('foto'), UserController.create)
-indexRoutes.get('/pagamento', GlobalController.pagamento)
-indexRoutes.post('/pagamento', GlobalController.finalizarPagamento)
-
-
-module.exports = indexRoutes;

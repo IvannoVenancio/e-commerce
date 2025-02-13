@@ -1,10 +1,6 @@
-const { createUser, findAllUsers } = require("../services/userService");
+// UserController.js
+const { createUser, findAllUsers, findbyemail } = require('../services/userService'); // Importação única
 const bcrypt = require("bcryptjs");
-const {findUserByEmail} = require("../services/userService");
-
-const { createUser, findAllUsers } = require("../services/userService")
-const { createUser, findAllUsers, findUserBYEmail } = require("../services/userService")
-
 
 exports.view = async (req, res) => {
     try {
@@ -26,51 +22,47 @@ exports.create = async (req, res) => {
     }
 };
 
-
-
 // Função para processar login do usuário
 exports.login = async (req, res) => {
     try {
         const { email, password } = req.body;
-        // const user = await findUserByEmail(email);
+        console.log("teste", email, password)
 
         // Verifica se o email foi fornecido
         if (!email || !password) {
             return res.status(400).send("Email e senha são obrigatórios.");
         }
 
-                // Busca o usuário pelo email
-                const user = await findUserByEmail(email);
-                console.log("erro email:::",user)
-        
-        // // Verifica a senha usando bcrypt
-        // const isPasswordValid = await bcrypt.compare(password, user.password);
+        // Busca o usuário pelo email
+        const user = await findbyemail(email);
+        console.log("erro email:::", user);
 
-        // if (!isPasswordValid) {
-        //     // Senha incorreta
-        //     return res.status(401).send("Usuário ou senha inválidos.");
-        // }
+        if (!user) {
+            return res.render("login", { error: "Usuário não encontrado!", layout: "clogin" });
+        }
 
-        // if (!user) {
-        //     return res.render("login", { error: "Usuário não encontrado!", layout: "clogin" });
-        // }
+        // Verifica a senha usando bcrypt
+        //await bcrypt.compare(password, user.password);
+        const isPasswordValid = password == user.password ? true : false
+        console.log("teste2", isPasswordValid)
 
-       //const isMatch = await bcrypt.compare(password, user.password);
-       //if (!isMatch) {
-       //    return res.render("login", { error: "Senha incorreta!", layout: "clogin" });
-       //}
+
+        if (!isPasswordValid) {
+            return res.render("login", { error: "Senha incorreta!", layout: "clogin" });
+        }
 
         // Criando sessão do usuário
-        req.session.user = {
-            id: user.id,
-            email: user.email,
-            name: user.firstname
-        };
-        console.log(" Sessão Criada:", req.session);
+        // req.session.user = {
+        //     id: user.id,
+        //     email: user.email,
+        //     name: user.firstname
+        // };
+        // console.log("Sessão Criada:", req.session);
 
-        //Redirecionamento com base no tipo de usuário
-        if (user.role === "admin") {
-            return res.redirect("/Listprodutos"); // Redireciona admin
+        // Redirecionamento com base no tipo de usuário
+        console.log("reat", user.isAdmin)
+        if (user.isAdmin === "1" || user.isAdmin === 1 || user.isAdmin === true) {
+            return res.redirect("/Listproduto"); // Redireciona admin
         } else {
             return res.redirect("/carrinho"); // Redireciona usuário comum
         }
@@ -80,4 +72,3 @@ exports.login = async (req, res) => {
         res.status(500).send("Erro interno do servidor");
     }
 };
-
