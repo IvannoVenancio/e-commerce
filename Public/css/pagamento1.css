@@ -41,6 +41,10 @@ form .row {
     margin: 15px 0;
 }
 
+.column img{
+    width: 10%;
+    height: 10%;
+}
 .input-box span {
     display: block;
     margin-bottom: 10px;
@@ -82,4 +86,3 @@ form .btn {
 form .btn:hover {
     background: #6a5acd;   
 }
-

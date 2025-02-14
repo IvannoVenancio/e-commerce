@@ -2,6 +2,8 @@
 let cart = [];
 let modalQt = 0;
 let key = 0;
+let total = 0;
+
 
 const c = (el)=>document.querySelector(el); 
 const cs = (el)=>document.querySelectorAll(el);
@@ -127,7 +129,7 @@ function updateCart() {
         
         let subtotal = 0;
         let desconto = 0;
-        let total = 0;
+        
         cart.map((itemCart, index)=>{
             let modelItem = modelsJson.find((itemBD)=>itemBD.id == itemCart.id);
             subtotal += modelItem.price[itemCart.size] * itemCart.qt;
@@ -173,9 +175,14 @@ function updateCart() {
         c('aside').style.left = '100vw';
     }
 }
+console.log("s",total)
 c('.cart--finalizar').addEventListener('click', function(){
-    if(cart.length>0)
-    window.location.href ='/pagamento';
+    if(cart.length>0){
+        const cartData = { total, cart };
+        const queryString = new URLSearchParams(cartData).toString();
+        window.location.href ='/pagamento';
+    }
 })
+console.log("ss",cart,total)
 
 

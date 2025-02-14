@@ -1,37 +1,45 @@
+<!DOCTYPE handlebars>
 
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="Width=device-width, initial-scale=1.0">
+    <title> Faça o seu pagamento</title>
+    <link rel="stylesheet" href="css/pagamento1.css">
+</head>
     <div class="container">
-        <form action="">
+        <form action="/pagamento" method="post">
         <div class="row">
             <div class="column">
                 <h3 class="title">Endereço de cobrança</h3>
                 <div class="input-box">
                     <span> Nome completo: </span>
-                    <input type="text" 
+                    <input type="text"  name="nome_completo"
                     placeholder="Ivano Venancio">
                 </div>
                 <div class="input-box">
                     <span>Email: </span>
-                    <input type="Email" 
+                    <input type="Email" name="email"
                     placeholder="exemplo@exemplo.com">
                 </div>
                 <div class="input-box">
                     <span>Endereço :</span>
-                    <input type="text" 
+                    <input type="text" name="endereco"
                     placeholder="Rua - localidade-Cidade">
                 </div>
                 <div class="input-box">
                     <span>Cidade :</span>
-                    <input type="text" 
+                    <input type="text" name="cidade"
                     placeholder="Namibe">
                 </div>
                 <div class="input-box">
                     <span>Estado</span>
-                    <input type="text" 
+                    <input type="text" name="estado"
                     placeholder="Angola">
                 </div>
                 <div class="input-box">
                     <span>Zip Code :</span>
-                    <input type="text" 
+                    <input type="text" name="zip_code"
                     placeholder="+244 xxx xxx xxx ">
                 </div>
             </div>
@@ -40,39 +48,38 @@
                 <h3 class="title">Pagamento</h3>
                 <div class="input-box">
                     <span>Cartões aceitos :</span>
-                    <img src="" alt="">
-                    <input type="text" 
-                    placeholder="Ivano Venancio">
+                    <img src="/images/CARTAO.jpeg" alt="">
+                    <img src="/images/OIP.jpeg" alt="">
+                   
                 </div>
                 <div class="input-box">
                     <span>Nome no cartão :</span>
-                    <input type="text" 
+                    <input type="text" name="nome_cartao" 
                     placeholder="Sr.Ivano Venancio">
                 </div>
                 <div class="input-box">
                     <span>Número do cartão de crédito</span>
-                    <input type="number" 
+                    <input type="number" name="numero_cartao"
                     placeholder="1111 2222 3333 4444">
                 </div>
                 <div class="input-box">
-                    <span>Expira :</span>
-                    <input type="number" 
-                    placeholder="2027">
+                    <span>Mês de Expiração:</span>
+                    <input type="number" name="exp_mes"
+                    placeholder="Maio">
                 </div>
                 <div class="input-box">
-                    <span>Exp.Ano :</span>
-                    <input type="number" 
+                    <span> Ano de Expiração :</span>
+                    <input type="number" name="exp_ano"
                     placeholder="2027">
                 </div>
                 <div class="input-box">
                     <span>CVV</span>
-                    <input type="number" 
+                    <input type="number" name="cvv"
                     placeholder="123">
         </div>
             </div>
         </div>
-            <button type="submit" class="btn"> Submeter </button>
-          
+            <input type="submit" class="btn" value="Submeter"> 
         </form>
             
     </div>

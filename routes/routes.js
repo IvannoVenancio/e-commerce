@@ -17,6 +17,8 @@ indexRoutes.get('/login', UserController.view)
 indexRoutes.post('/login', UserController.login)
 indexRoutes.post('/create_user', UserController.create)
 indexRoutes.get('/pagamento', GlobalController.pagamento)
+indexRoutes.post('/pagamento', GlobalController.finalizarPagamento)
+
 
 indexRoutes.post('/login', UserController.login);  // Verifique que a rota POST está aqui
 
