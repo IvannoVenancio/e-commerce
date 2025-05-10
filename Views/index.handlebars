@@ -1,7 +1,14 @@
     <div class="icones">
       <div class="search-container"> <input type="text" placeholder="Search..."> <i class="fas fa-search search-icon"></i> </div>
+
+      <div class="cart-icon"> <a href="#cart"><i class="fas fa-shopping-cart"></i><span id="cart-count"></span></a><img src="/images/carrinho-de-compras.png" alt="">0</div>
+
       <ul id="productList"></ul>
-      <div class="cart-icon"> <a href="/carrinho"><i class="fas fa-shopping-cart"></i><span id="cart-count"></span></a>0</div>
+      <div class="cart-icon">
+            <img src="/images/carrinho-de-compras.png" alt="Carrinho de Compras" id="cartButton">
+            <span id="cartCount">0</span>
+        </div>
+
       <div class="fas-fa-bars" id="menu-bnt">
         <img src="/images/menu-hamburguer.png" alt="">
       </div>
@@ -12,20 +19,20 @@
     <img src="/images/S23Ultra.jpg" alt="Novo Smartphone">
     <h1>Grande Promoção de  Inaguração!</h1> 
     <p>Até 50% de desconto em items selecionaados</p> 
-    <button><a href="/carrinho">Compre Agora </a></button>
+    <button><a href="teste.html">Compre Agora </a></button>
    </div>
 
    <div class="products"> 
     <div class="product"> <img src="/images/gamer.jpeg" alt="Product 1"> 
     <h2>Product 1</h2> <p>$10.00</p>
-    <button class="add-to-cart" onclick="addToCart('Product 4', 40.00)">Adicionar ao carrinho</button>
+    <button class="add-to-cart" onclick="addToCart('Product 4', 40.00)">>Adicionar ao carrinho</button>
   </div>
 </div>
 <div class="products"> 
   <div class="product"> 
   <img src="/images/gamer.jpeg" alt="Product 1"> 
   <h2>Product 1</h2> <p>$10.00</p>
-  <button class="add-to-cart" onclick="addToCart('Product 4', 40.00)">Adicionar ao carrinho</button>
+  <button class="add-to-cart" onclick="addToCart('Product 4', 40.00)">>Adicionar ao carrinho</button>
   <img src="/images/iphonne12.jpg" alt="Product 1"> 
   <h2>Product 1</h2> <p>AOA 100.000,00</p>
   <button class="add-to-cart" onclick="addToCart('Product 4', 40.00)">>Adicionar ao carrinho</button>
@@ -52,3 +59,67 @@
  </div>
 </div> 
 <script src="../Public/js/home.js"></script>
+
+  <main>
+      <section class="promo">
+            <div class="container">
+                <div class="promo-content">
+                    <img src="/images/iPhone_16_Pro.png" alt="Promoção iPhone 16" class="promo-image">
+                    <div class="promo-text">
+                        <h2>iPhone 16 - O Futuro Está Aqui</h2>
+                        <p>Descubra o novo iPhone 16 com tecnologia de ponta e design inovador.</p>
+                        <button id="promoButton">Saiba Mais</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+     <section class="advertisements">
+    <div class="container">
+        <h2>Publicidade</h2>
+        <div class="advertisement-grid">
+            <div class="advertisement large-banner animate__animated">
+                <img src="/images/bannerlong.jpg" alt="Publicidade 1">
+                <h3>Publicidade 1</h3>
+                <p>Descrição da publicidade 1.</p>
+            </div>
+            
+            <div class="small-banners">
+                <div class="advertisement small-banner animate__animated">
+                    <img src="/images/banner1.jpg" alt="Publicidade 2">
+                    <h3>Publicidade 2</h3>
+                    <p>Descrição da publicidade 2.</p>
+                </div>
+                <div class="advertisement small-banner animate__animated">
+                    <img src="/images/banner2.jpg" alt="Publicidade 3">
+                    <h3>Publicidade 3</h3>
+                </div>
+                 <div class="advertisement small-banner animate__animated">
+                    <img src="/images/valentine.jpg" id="anucio" alt="Publicidade 3">
+                    <h3>Publicidade 3</h3>
+                    <button id="promoButton">Compre Agora</button>
+                </div>
+                 <div class="advertisement small-banner animate__animated">
+                    <img src="/images/appleplay.jpg" alt="Publicidade 3">
+                    <h3>Publicidade 3</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+    </main>
+    <!-- Modal do carrinho -->
+    <div id="cartModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Carrinho de Compras</h2>
+            <ul id="cartItems"></ul>
+            <p>Total: Kzs <span id="cartTotal">0</span></p>
+            <button id="checkoutButton">Ver Carrinho</button>
+        </div>
+    </div>
+
+<script src="/js/home.js"></script>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 9adea94f4749b7d296daa299341ed7f3e82572ed

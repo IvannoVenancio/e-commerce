@@ -1,0 +1,78 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: linear-gradient(45deg, rgb(22, 24, 156), rgb(241, 241, 235));
+}
+div{
+    background-color: rgba(0, 0, 0, 0.9);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    padding: 80px;
+    border-radius: 15px;
+    color: #fff;
+}
+input{
+    padding: 15px;
+    border: none;
+    outline: none;
+    font-size: 15px;
+}
+button{
+    background-color: dodgerblue;
+    border: none;
+    padding: 15px;
+    width: 100%;
+    border-radius: 10px;
+    color: white;
+    font-size: 15px;
+    
+}
+button:hover{
+    background-color: deepskyblue;
+    cursor: pointer;
+}
+
+h1 {
+position: relative;
+top: -35px; 
+}
+
+
+footer{
+    position: fixed;
+    bottom: 0;
+    color: #fff;
+    width: 100%;
+    background-color: #535151; 
+    text-align: center; /* Centraliza o texto */
+    padding: 10px 0; /* Espaçamento interno */
+}
+
+
+.header {
+    position: fixed; /* Fixa o header no topo da página */
+    top: 0; /* Posiciona no topo */
+    left: 0; /* Alinha à esquerda */
+    width: 100%; /* Faz o header ocupar toda a largura da página */
+    background-color: #020034; /* Cor de fundo do header */
+    color: white; /* Cor do texto */
+    z-index: 1000; /* Garante que o header fique acima de outros elementos */
+    display: flex; /* Define um layout flexível */
+    align-items: center; /* Alinha verticalmente os itens */
+    padding: 10px 20px; /* Espaçamento interno */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Adiciona uma sombra para destaque */
+}
+
+/* Estilização para o link da logo */
+.logo {
+    text-decoration: none; /* Remove o sublinhado do link */
+    color: white; /* Define a cor do texto */
+    font-size: 1.5rem; /* Tamanho da fonte */
+    font-weight: bold; /* Negrito */
+}
+
+/* Adiciona margem ao corpo para não ficar sobreposto pelo header */
+body {
+    margin-top: 60px; /* Ajuste conforme a altura do header */
+}

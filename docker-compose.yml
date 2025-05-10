@@ -12,8 +12,24 @@ services:
       - ./:/home/app/
     networks:
       - app-network
+    links:
+      - mysqldb
+      
+ mysqldb:
+   image: mysql:8.0.21
+   container_name: mysql-ecommerce
+   env_file:
+   - ./.env
+   ports:
+   - 3306:3306
+   volumes:
+   - damartec-default:/var/lib/mysql
+   networks:
+   - app-network
 
-
-networks:
+ networks:
   app-network:
     driver: bridge
+
+ volumes:
+  damartec-default: {}
